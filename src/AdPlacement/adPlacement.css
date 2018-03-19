@@ -1,0 +1,52 @@
+.default
+{
+    max-width: 100%;
+}
+
+:global
+{
+    .upperContent,
+    .lowerContent
+    {
+        .content-background
+        {
+            fill: #fff;
+        }
+
+        &:hover
+        {
+            .content-background
+            {
+                fill: #D4EBF5;
+            }
+        }
+    }
+
+    .content
+    {
+        transition: ease all 0.2s;
+    }
+    .belowIsShown .content
+    {
+
+        transform: translateY(-60px);
+    }
+
+    .rectangle-path
+    {
+        fill: #E6E6E6;
+    }
+
+    .upperContent:hover,
+    .lowerContent:hover
+    {
+        .rectangle-path
+        {
+            fill: #289BC8;
+        }
+    }
+}
+
+/* upperContent and lowerContent */
+/* BLUE: #289BC8 */
+/* GREY: #E6E6E6 */
