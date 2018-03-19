@@ -1,21 +1,19 @@
 .default
 {
     max-width: 100%;
-}
 
-:global
-{
     .upperContent,
     .lowerContent
     {
-        .content-background
+        .contentBackground
         {
             fill: #fff;
         }
 
-        &:hover
+        &:hover,
+        &.highlight
         {
-            .content-background
+            .contentBackground
             {
                 fill: #D4EBF5;
             }
@@ -25,14 +23,15 @@
     .content
     {
         transition: ease all 0.2s;
-    }
-    .belowIsShown .content
-    {
 
-        transform: translateY(-60px);
+        &.belowIsShown
+        {
+
+            transform: translateY(-60px);
+        }
     }
 
-    .rectangle-path
+    .rectanglePath
     {
         fill: #E6E6E6;
     }
@@ -40,7 +39,7 @@
     .upperContent:hover,
     .lowerContent:hover
     {
-        .rectangle-path
+        .rectanglePath
         {
             fill: #289BC8;
         }
