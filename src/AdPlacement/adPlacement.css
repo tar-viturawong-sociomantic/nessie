@@ -2,50 +2,100 @@
 {
     max-width: 100%;
 
+    .content
+    {
+        transition: ease all 0.2s;
+    }
+
     .upperContent,
     .lowerContent
     {
         .contentBackground
         {
+            transition: ease all 0.2s;
             fill: #fff;
         }
 
-        &:hover,
-        &.highlight
+        &:hover
         {
             .contentBackground
             {
                 fill: #D4EBF5;
             }
-        }
-    }
 
-    .content
-    {
-        transition: ease all 0.2s;
-
-        &.belowIsShown
-        {
-
-            transform: translateY(-60px);
+            .rectanglePath
+            {
+                fill: #C0D7E1;
+            }
         }
     }
 
     .rectanglePath
     {
         fill: #E6E6E6;
+        transition: ease all 0.2s;
     }
 
-    .upperContent:hover,
-    .lowerContent:hover
+    .divider
     {
+        transition: ease all 0.2s;
+    }
+}
+
+.showBelow .content
+{
+    transform: translateY(-60px);
+}
+
+.showBelow .divider
+{
+    transform: translateY(82px);
+}
+
+.highlight__above
+{
+    .upperContent
+    {
+        .contentBackground
+        {
+            fill: #D4EBF5;
+        }
+
         .rectanglePath
         {
-            fill: #289BC8;
+            fill: #C0D7E1;
         }
     }
 }
 
-/* upperContent and lowerContent */
-/* BLUE: #289BC8 */
-/* GREY: #E6E6E6 */
+.highlight__below
+{
+    .lowerContent
+    {
+        .contentBackground
+        {
+            fill: #D4EBF5;
+        }
+
+        .rectanglePath
+        {
+            fill: #C0D7E1;
+        }
+    }
+}
+
+.upperSelected .upperContent
+{
+    .rectanglePath
+    {
+        fill: #289BC8;
+    }
+}
+
+.lowerSelected .lowerContent
+{
+    .rectanglePath
+    {
+        fill: #289BC8;
+    }
+}
