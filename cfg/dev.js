@@ -13,10 +13,10 @@ const config = Object.assign( {}, baseConfig, {
 
     output : {
         path          : path.join( __dirname, '/../dist' ),
-        filename      : 'displayComponents.js',
+        filename      : 'index.dev.js',
         publicPath    : defaultSettings.publicPath,
-        library       : 'DisplayComponents', // do we need tothers
-        libraryTarget : 'window'
+        library       : 'Nessie',
+        libraryTarget : 'umd',
     },
 
     cache : true,
@@ -38,7 +38,7 @@ const config = Object.assign( {}, baseConfig, {
         } ),
         new ExtractTextPlugin( {
             fallback  : 'style-loader',
-            filename  : 'displayComponentStyles.css',
+            filename  : 'styles.dev.css',
             allChunks : true
         } ),
 
@@ -60,7 +60,7 @@ const config = Object.assign( {}, baseConfig, {
                     options :
                     {
                         modules        : true,
-                        localIdentName : '[name]__[local]__[hash:base64:5]',
+                        localIdentName : '[name]__[local]',
                         importLoaders  : 1
                     }
                 },
